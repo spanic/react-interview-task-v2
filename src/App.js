@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Provider } from "react-redux";
+import { store } from "./store/store.js";
+import { Layout } from "antd";
+import { styled } from "styled-components";
+import BoltOnsList from "./components/bolt-ons-list/BoltOnsList.jsx";
+import Total from "./components/total/Total.jsx";
+
+const { Footer, Content } = Layout;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Layout>
+        <ContentWrapper>
+          <BoltOnsList />
+        </ContentWrapper>
+        <StickyFooter>
+          <Total />
+        </StickyFooter>
+      </Layout>
+    </Provider>
   );
 }
+
+const ContentWrapper = styled(Content)`
+  padding: 16px;
+  min-height: calc(100vh - 86px - 16px);
+`;
+
+const StickyFooter = styled(Footer)`
+  position: sticky;
+  bottom: 0;
+  background-color: #003eb3;
+`;
 
 export default App;
