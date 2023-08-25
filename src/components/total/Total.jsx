@@ -1,14 +1,14 @@
-import React from 'react';
-import { Statistic } from 'antd';
-import styled from 'styled-components';
-import { useSelector } from 'react-redux';
+import { Statistic } from "antd";
+import React from "react";
+import { useSelector } from "react-redux";
+import styled from "styled-components";
 
 /**
  * DO NOT MODIFY this component
  */
 
 const _Total = ({ className }) => {
-  const total = useSelector((state) => state.boltOns.totalPrice);
+  const total = useSelector((state) => state.offers.totalPrice);
 
   return (
     <div className={className}>
@@ -19,7 +19,8 @@ const _Total = ({ className }) => {
 };
 
 const Total = styled(_Total)`
-  &, & .ant-statistic-content {
+  &,
+  & .ant-statistic-content {
     color: white;
   }
 `;

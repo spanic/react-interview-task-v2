@@ -1,5 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit';
-import boltOnsReducer from './bolt-ons-slice.js';
+import { configureStore } from "@reduxjs/toolkit";
+import offersReducer from "./offers-slice.js";
 
 /**
  * DO NOT MODIFY this
@@ -7,6 +7,6 @@ import boltOnsReducer from './bolt-ons-slice.js';
 
 export const store = configureStore({
   reducer: {
-    boltOns: boltOnsReducer,
+    offers: offersReducer,
   },
 });

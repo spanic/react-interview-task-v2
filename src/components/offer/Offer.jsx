@@ -1,7 +1,7 @@
-import React, { memo } from 'react';
-import styled from 'styled-components';
-import { Button, Card, Typography } from 'antd';
-import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
+import { MinusOutlined, PlusOutlined } from "@ant-design/icons";
+import { Button, Card, Typography } from "antd";
+import React, { memo } from "react";
+import styled from "styled-components";
 
 /**
  * DO NOT MODIFY this component
@@ -9,7 +9,7 @@ import { PlusOutlined, MinusOutlined } from '@ant-design/icons';
 
 const { Paragraph, Text } = Typography;
 
-const BoltOn = memo(
+const Offer = memo(
   ({
     data: { id, title, description, price, selected } = {},
     onSelect,
@@ -47,4 +47,4 @@ const Price = styled(Text)`
   margin-left: 16px;
 `;
 
-export default BoltOn;
+export default Offer;

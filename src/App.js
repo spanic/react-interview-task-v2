@@ -1,9 +1,9 @@
-import { Provider } from "react-redux";
-import { store } from "./store/store.js";
 import { Layout } from "antd";
+import { Provider } from "react-redux";
 import { styled } from "styled-components";
-import BoltOnsList from "./components/bolt-ons-list/BoltOnsList.jsx";
+import OffersList from "./components/offers-list/OffersList.jsx";
 import Total from "./components/total/Total.jsx";
+import { store } from "./store/store.js";
 
 const { Footer, Content } = Layout;
 
@@ -12,7 +12,7 @@ function App() {
     <Provider store={store}>
       <Layout>
         <ContentWrapper>
-          <BoltOnsList />
+          <OffersList />
         </ContentWrapper>
         <StickyFooter>
           <Total />
