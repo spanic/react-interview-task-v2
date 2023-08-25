@@ -30,4 +30,4 @@ It's a simple client-server React ⚛️ + Express.js application used to displa
 
 ## Final result
 
-[TBD]
+<img width="800" src="https://github.com/spanic/react-interview-task-v2/assets/15694775/30177711-510f-401e-b272-01cb7742548b" alt="React interview task v.2 final result example" />
