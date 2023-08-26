@@ -15,7 +15,7 @@ It's a simple client-server React ⚛️ + Express.js application used to displa
 
 ## Steps to do
 
-1. Get Orders data from the remote API server: send `GET` request to `http:\\localhost:3001\offers`
+1. Get Offers data from the remote API server: send `GET` request to `http://localhost:3001/offers`
 2. Save the received data to Redux store
 
    > Redux store has been already added and configured for the project, just dispatch the proper action declared in `src/store/offers.slice.js`
