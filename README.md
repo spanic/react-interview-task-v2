@@ -24,9 +24,9 @@ It's a simple client-server React ⚛️ + Express.js application used to displa
 
    > 🚧 Checkpoint: make sure that all the Offers cards are visible and each contain Offer data: title, description and price
 
-4. Add `onSelect` and `onRemove` handler functions for each `Offer` component. These functions should dispatch `toggleOfferSelection` action and provide chosen Offer `id` and `selected` boolean value as an arguments
+4. Add `onSelect` and `onRemove` handler functions for each `Offer` component. These functions should dispatch `toggleOfferSelection` action and provide chosen Offer `id` and `selected` boolean value as a payload, like `{id, selected: true/false}`
 
-5. Implement the `toggleOfferSelection` reducer from `src/store/offers.slice.js`: it should add `selected =  true/false` to the chosen Offer in Redux store and add / subtract its price from the order's total sum.
+5. Implement the `toggleOfferSelection` reducer from `src/store/offers.slice.js`: it should save selected flag for the chosen Offer in Redux store and add / subtract its price from the order's total sum.
 
 ## Final result
 

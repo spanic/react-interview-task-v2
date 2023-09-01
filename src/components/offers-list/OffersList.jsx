@@ -1,7 +1,8 @@
 import { Col, Empty, Row } from "antd";
-import React from "react";
+import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import Offer from "../offer/Offer.jsx";
+import { Offer } from "@spanic/react-interview-components";
+import { storeOffers, toggleOffersSelection } from "../../store/offers-slice";
 
 export default function OffersList() {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ export default function OffersList() {
   );
 
   return offers.length ? (
-    <Row gutter={[16, 16]}>{/* list the offers here */}</Row>
+    <Row gutter={[16, 16]}>{/* list the Offers here */}</Row>
   ) : (
     <Empty />
   );

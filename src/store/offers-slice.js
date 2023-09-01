@@ -10,8 +10,7 @@ export const offersSlice = createSlice({
   initialState,
   reducers: {
     storeOffers: (state, action) => {
-      const offers = action.payload;
-      state.offers = offers;
+      // state.offers = ?
     },
 
     toggleOffersSelection: (state, action) => {
