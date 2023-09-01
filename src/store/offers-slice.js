@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   offers: [],
+  selectedMap: {},
   totalPrice: 0,
 };
 
@@ -16,7 +17,15 @@ export const offersSlice = createSlice({
 
     toggleOffersSelection: (state, action) => {
       const { id, selected } = action.payload;
-      // state.totalPrice = ?
+      state.selectedMap = {
+        ...state.selectedMap,
+        [id]: selected,
+      };
+      const offer = state.offers.find((offer) => offer.id === id);
+      state.totalPrice = +(
+        state.totalPrice +
+        offer.price * (selected ? 1 : -1)
+      ).toFixed(2);
     },
   },
 });
