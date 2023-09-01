@@ -2,6 +2,8 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/spanic/react-interview-task-v2?title=React%20interview%20task%20v.2)
 
+<a href="https://master--64efbbdd17b6d0944f4367db.chromatic.com/?path=/docs/components-offer--docs" target="_blank" title="Open Chromatic Storybook showcases">![Static Badge](https://img.shields.io/badge/Showcases-red?style=for-the-badge&logo=chromatic&logoColor=white&label=open)</a>
+
 ## Description
 
 It's a simple client-server React ⚛️ + Express.js application used to display some Offers that user can add to their order. When user adds / removes Offers, total price on the bottom panel should be changed accordingly 💸
