@@ -2,7 +2,10 @@ import { Col, Empty, Row } from "antd";
 import React, { useCallback, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { OfferTypescript as Offer } from "@spanic/react-interview-components";
-import { storeOffers, toggleOffersSelection } from "../../store/offers-slice";
+import {
+  storeOffers,
+  toggleOffersSelection,
+} from "../../../store/offers-slice";
 
 export default function OffersList() {
   const dispatch = useDispatch();
