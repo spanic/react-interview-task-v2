@@ -18,7 +18,7 @@ function Offers() {
 
 const ContentWrapper = styled(Content)`
   padding: 16px;
-  min-height: calc(100vh - 86px - 16px);
+  min-height: calc(100vh - 86px - 16px - 64px /* header height */);
 `;
 
 const StickyTotalFooter = styled(TotalWrapper)`
@@ -28,4 +28,4 @@ const StickyTotalFooter = styled(TotalWrapper)`
   }
 `;
 
-export default Offers;
+export { Offers };

@@ -1,10 +1,12 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
-import App from "../App";
-import Offers from "../components/offers/Offers";
+import { App } from "../App";
+import { Offers } from "../components/offers/Offers";
+import { Graph } from "../components/graph/Graph";
 
 const Routes = Object.freeze({
   Root: "/",
   Offers: "/offers",
+  Graph: "/graph",
 });
 
 const router = createBrowserRouter([
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: Routes.Offers,
         element: <Offers />,
+      },
+      {
+        path: Routes.Graph,
+        element: <Graph />,
       },
     ],
   },
