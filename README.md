@@ -6,8 +6,10 @@
 
 ## Exercises
 
-- [eCommerce: adding offers](src/components/offers)
+- ### [🛒 eCommerce: adding offers](src/components/offers)
 
    <img width="800" src="https://github.com/spanic/react-interview-task-v2/assets/15694775/30177711-510f-401e-b272-01cb7742548b" alt="React interview task v.2 Offers final result example" />
 
-- [Graph data transformation](src/components/graph)
+- ### [👨🏻‍💻 Graph data transformation](src/components/graph)
+
+  <img width="800" alt="React interview task v.2 Graph final result example" src="https://github.com/spanic/react-interview-task-v2/assets/15694775/cae9940e-1b62-4409-874a-58b744eec612" />

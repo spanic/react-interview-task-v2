@@ -92,4 +92,4 @@ There's a schematic graphical representation of nodes and connections between th
 
 ## Final result
 
-[TBD]
+<img width="800" alt="React interview task v.2 Graph final result example" src="https://github.com/spanic/react-interview-task-v2/assets/15694775/cae9940e-1b62-4409-874a-58b744eec612" />
