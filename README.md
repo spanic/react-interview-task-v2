@@ -8,7 +8,7 @@
 
 - ### [🛒 eCommerce: adding offers](src/components/offers)
 
-   <img width="800" src="https://github.com/spanic/react-interview-task-v2/assets/15694775/30177711-510f-401e-b272-01cb7742548b" alt="React interview task v.2 Offers final result example" />
+   <img width="800" src="https://github.com/spanic/react-interview-task-v2/assets/15694775/696e7f74-c559-4605-b5d0-5006f46856b8" alt="React interview task v.2 Offers final result example" />
 
 - ### [👨🏻‍💻 Graph data transformation](src/components/graph)
 
