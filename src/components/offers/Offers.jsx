@@ -17,9 +17,11 @@ function Offers() {
 }
 
 const ContentWrapper = styled(Content)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 16px;
   min-height: calc(100vh - 86px - 16px - 64px /* header height */);
-  height: 0;
 `;
 
 const StickyTotalFooter = styled(TotalWrapper)`

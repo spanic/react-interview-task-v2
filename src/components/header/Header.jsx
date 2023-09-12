@@ -25,4 +25,5 @@ export const Header = () => {
 const StickyHeader = styled(AntdHeader)`
   position: sticky;
   top: 0;
+  z-index: 1;
 `;
