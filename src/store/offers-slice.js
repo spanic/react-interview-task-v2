@@ -16,15 +16,7 @@ export const offersSlice = createSlice({
       // TODO: store Offer's selected state, calculate the total price
     },
   },
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchOffers.pending, (state) => {
-        // TODO: show loader
-      })
-      .addCase(fetchOffers.fulfilled, (state, action) => {
-        // TODO: hide loader, save offers into the Redux store
-      });
-  },
+  extraReducers: (builder) => {},
 });
 
 export const { toggleOffersSelection } = offersSlice.actions;
