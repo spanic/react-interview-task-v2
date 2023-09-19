@@ -1,8 +1,8 @@
+import React from "react";
 import { Col, Empty, Row, Spin } from "antd";
-import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { OfferTypescript as Offer } from "@spanic/react-interview-components";
-import { toggleOffersSelection } from "../../../store/offers-slice";
+import { Offer } from "@spanic/react-interview-components";
+import { changeSelectedQty } from "../../../store/offers-slice";
 import { fetchOffers } from "../../../thunks/offers.thunks";
 import styled from "styled-components";
 
@@ -11,7 +11,7 @@ export default function OffersList() {
 
   const { offers, loading } = useSelector((state) => state.offers);
 
-  const OfferComponent = (offer) => (
+  const OfferWrapper = (offer) => (
     <Col xs={{ span: 24 }} sm={{ span: 12 }} md={{ span: 8 }} lg={{ span: 6 }}>
       <Offer data={offer} />
     </Col>
@@ -33,8 +33,12 @@ export default function OffersList() {
 }
 
 const SpinContainer = styled.div`
-  height: 100%;
+  position: absolute;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 `;

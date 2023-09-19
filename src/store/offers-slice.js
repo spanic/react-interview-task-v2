@@ -11,22 +11,16 @@ export const offersSlice = createSlice({
   name: "offers",
   initialState,
   reducers: {
-    toggleOffersSelection: (state, action) => {
+    changeSelectedQty: (state, action) => {
       const { id, selected } = action.payload;
-      // TODO: store Offer's selected state, calculate the total price
+      // TODO: save chosen Offer selected state to the store
     },
   },
   extraReducers: (builder) => {
-    builder
-      .addCase(fetchOffers.pending, (state) => {
-        // TODO: show loader
-      })
-      .addCase(fetchOffers.fulfilled, (state, action) => {
-        // TODO: hide loader, save offers into the Redux store
-      });
+    // TODO: handle asyncThunk state changes here: display/hide loader, add Offers to the store
   },
 });
 
-export const { toggleOffersSelection } = offersSlice.actions;
+export const { changeSelectedQty } = offersSlice.actions;
 
 export default offersSlice.reducer;

@@ -17,9 +17,7 @@ function Offers() {
 }
 
 const ContentWrapper = styled(Content)`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   padding: 16px;
   min-height: calc(100vh - 86px - 16px - 64px /* header height */);
 `;
