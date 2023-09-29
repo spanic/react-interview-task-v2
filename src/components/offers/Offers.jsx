@@ -2,10 +2,19 @@ import { Layout } from "antd";
 import { styled } from "styled-components";
 import OffersList from "./offers-list/OffersList.jsx";
 import TotalWrapper from "./total-wrapper/TotalWrapper.jsx";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchOffers } from "../../thunks/offers.thunks";
 
 const { Content } = Layout;
 
 function Offers() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchOffers());
+  }, []);
+
   return (
     <>
       <ContentWrapper>
