@@ -1,0 +1,32 @@
+.offers-list__layout {
+  min-height: 100vh;
+
+  /* iOS Safari vertical scroll fix */
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+}
+
+.offers-list__header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.offers-list__content {
+  margin: 16px 24px;
+  position: relative;
+}
+
+.offers-list__flex-container {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+}
+
+.offers-list__total {
+  position: sticky;
+  bottom: 0;
+}

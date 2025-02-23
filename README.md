@@ -1,14 +1,17 @@
-# React interview tasks v.2
+# React Interview Task
 
-Open cloud developemnt environment:
+## Build & deploy
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/spanic/react-interview-task-v2?title=React%20interview%20task%20v.2)
+- `docker buildx build --platform=linux/amd64 -t react-interview-task-showcase:[version] .`
+- `docker login public.cr.cloud.ru -u [user_id] -p [password]`
+- `docker push public.cr.cloud.ru/react-interview-task-showcase:[version]`
+- Create a new revision of the Container App that already exists on the Cloud.ru platform
 
-See components' showcases:
+### TODO:
 
-<a href="https://master--64efbbdd17b6d0944f4367db.chromatic.com/?path=/docs/components-offer--docs" target="_blank" title="Open Chromatic Storybook showcases">![Static Badge](https://img.shields.io/badge/Showcases-red?style=for-the-badge&logo=chromatic&logoColor=white&label=open)</a>
+- [ ] Configure CI/CD 
 
-## Exercises
-
-- [🛒 eCommerce: adding offers](src/components/offers)
-- [👨🏻‍💻 Graph data transformation](src/components/graph)
+  Blockers:
+    - [ ] Gitverse runner doesn't work on MacOS: actions cannot access Docker daemon - why?
+    - [ ] Runner cannot be deployed as a Cloud.ru Container App: `var/run/docker.sock` is not being mounted even in privileged mode
+    - [ ] Deploying runner to the existing VM needs resource constraints to be applied to avoid whole installation slowdown

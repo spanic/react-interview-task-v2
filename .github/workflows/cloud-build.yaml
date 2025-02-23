@@ -1,0 +1,35 @@
+name: 'Build Docker image & push to Cloud.ru Artifact Registry'
+
+on:
+  push:
+    branches: ['master', 'vite-refactoring']
+  pull_request:
+    branches: ['master', 'vite-refactoring']
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: 'Build'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ vars.REGISTRY_NAME }}/${{ vars.REPOSITORY_NAME }}
+
+      - name: Login to Cloud.ru Artifact Registry
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ vars.REGISTRY_NAME }}
+          username: ${{ secrets.CLOUD_RU_ID }}
+          password: ${{ secrets.CLOUD_RU_SECRET }}
+
+      - name: Build and push Docker image
+        id: build_push
+        uses: docker/build-push-action@v6
+        with:
+          push: ${{ github.event_name != 'pull_request' }}
+          platforms: linux/amd64
+          tags: ${{ steps.meta.outputs.tags }}
